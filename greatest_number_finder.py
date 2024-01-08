@@ -5,7 +5,7 @@ root = tk.Tk()
 root.title("Greatest Number Finder")
 
 def greatest_num():
-    
+    try:
         # Ask user for the 1st number input
         num_one = float(entry_num_one.get())
 
@@ -38,6 +38,9 @@ def greatest_num():
                 else:
                     #print("They're all equal!")
                     result_label.config(text=f"They're all equal!")
+
+    except ValueError:
+        messagebox.showerror("Error", "Please enter valid numbers only.")
 
 label_num_one = tk.Label(root, text="Enter the first number:")
 label_num_one.pack()
