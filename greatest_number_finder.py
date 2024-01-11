@@ -65,6 +65,9 @@ entry_num_three.pack()
 button = CTkButton(app, text="Generate", command=greatest_num, fg_color="#45A29E",border_color="#45A29E", border_width=2)
 button.pack(padx=20, pady=20)
 
+button.bind("<Enter>", lambda event: button.configure(text_color="black", fg_color="#66FCF1"))
+button.bind("<Leave>", lambda event: button.configure(text_color="white", fg_color="#45A29E"))
+
 result_label = CTkLabel(app, text="", font=("Tahoma", 14), text_color="white")
 result_label.pack()
 
