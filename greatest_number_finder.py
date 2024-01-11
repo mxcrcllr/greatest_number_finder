@@ -9,6 +9,9 @@ set_appearance_mode('dark')
 def greatest_num():
     try:
 
+        error_label.configure(text="")
+        result_label.configure(text="")
+        
         # Ask user for the 1st number input
         num_one = float(entry_num_one.get())
 
